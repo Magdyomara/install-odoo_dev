@@ -1,0 +1,63 @@
+بِسْمِ ٱللَّهِ ٱلرَّحمَـٰنِ ٱلرَّحِيمِ
+#Installing Odoo for programming.
+# download the tools used to give better results and not cause any malfunctions when operating the system.
+#Upon completion of the installation of Ubuntu and the tools assigned to it (a detailed explanation is included in another file with all the details and instructions for using the Linux system)
+#Here are some important tools for Odoo.
+______________________________________________________________________________________________________________________________________________________________________________________________
+#All you have to do is take these commands and put them in your terminal on the root
+_______________________________________________________________________________________________________________________________________________________________________________________________
+#Firstly   (to Update Server)
+sudo apt-get update
+sudo apt-get upgrade -y
+apt install -y zip gdebi
+________________________________________________________________________________________________________________________________________________________________________________________________
+#secondly Install PostgreSQL Server.
+________________________________________________________________________________________________________________________________________________________________________________________________
+Go to the site # https://www.postgresql.org/download/
+Select the Linux version and then Ubuntu
+Then copy the script
+Then put it in your terminal
+//////Or follow these steps in different stages/////
+1- sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+2- wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+3- sudo apt-get update
+4- sudo apt-get -y install postgresql
+5- sudo apt-get install postgresql-13 postgresql-server-dev-13 -y
+*****To create a database for your device, all you have to do is this******
+sudo su - postgres -c "createuser -s $Ubuntu_USER_name$" 2> /dev/null || true     (Cancel $Ubuntu_USER_name$ In its place, replace it with the identifying name of your version of Ubuntu)
+___________________________________________________________________________________________________________________________________________________________________________________________________________
+#Third to install python.
+______________________________________________________________________________________________________________________________________________________________________________________________
+1- sudo apt install -y git python3-pip build-essential wget python3-dev python3-venv python3-wheel libfreetype6-dev libxml2-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools node-less libjpeg-dev zlib1g-dev libpq-dev libxslt1-dev libldap2-dev libtiff5-dev libjpeg8-dev libopenjp2-7-dev liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev
+2- sudo apt install -y python3-babel python3-bs4 python3-cffi-backend python3-cryptography python3-dateutil python3-docutils python3-feedparser python3-funcsigs python3-gevent python3-greenlet python3-html2text python3-html5lib python3-jinja2 python3-lxml python3-mako python3-markupsafe python3-mock python3-ofxparse python3-openssl python3-passlib python3-pbr python3-pil python3-psutil python3-psycopg2 python3-pydot python3-pygments python3-pyparsing python3-pypdf2 python3-renderpm python3-reportlab python3-reportlab-accel python3-roman python3-serial python3-stdnum python3-suds python3-tz python3-usb python3-werkzeug python3-xlsxwriter python3-yaml
+3-sudo apt-get install -y python3-pip python3-wheel python3-setuptools
+4-sudo apt install python3-pip
+5-sudo -H pip3 install --upgrade pip
+______________________________________________________________________________________________________________________________________________________________________________________________
+#Fourthly Install Wkhtmltopd.
+______________________________________________________________________________________________________________________________________________________________________________________________
+**** https://wkhtmltopdf.org/downloads.html ******
+Choose that choice
+( Ubuntu	22.04 (jammy)	amd64)
+or 
+1-sudo wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb 
+2-sudo gdebi --n `basename https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb`
+3-sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin
+4-sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin
+______________________________________________________________________________________________________________________________________________________________________________________________
+#Fifth install nodejs.
+______________________________________________________________________________________________________________________________________________________________________________________________
+***** https://nodejs.org/en/download/package-manager#debian-and-ubuntu-based-linux-distributions *****
+1-sudo snap install node --classic --channel=14
+2-sudo snap refresh node --channel=15
+4-sudo snap install node --classic --channel=edge
+______________________________________________________________________________________________________________________________________________________________________________________________
+#install odoo 
+______________________________________________________________________________________________________________________________________________________________________________________________
+1- sudo git clone --depth 1 --branch $OE_BRANCH$ https://www.github.com/odoo/odoo   ($OE_BRANCH$ =Write any of the required versions, such as: 17.0 or 16.0 or 15.0
+2- pip3 install-r requierments.txt
+3-./odoo-bin  
+______________________________________________________________________________________________________________________________________________________________________________________________
+Then type in your browser : 0.0.0.0:8069               
+______________________________________________________________________________________________________________________________________________________________________________________________
+
