@@ -36,4 +36,4 @@ ________________________________________________________________________________
 3_ :_ no module named 'pypdf2'
 pip inistall pypdf2
 or 
-pip install -r requirment.te
+pip3 install -r requierments.txt
