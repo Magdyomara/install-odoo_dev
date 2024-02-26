@@ -23,3 +23,17 @@ then press continue
 __________________________________________________________________________________________________________________________________________________________________________________________
         **** as for some problems that appear frequently when installing database we will solve them ****
         _________________________________________________________________________________________________
+1_ :_ UTF-8 error
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+sudo dpkg-reconfigure locales
+____________________________________________________________________________________________________________________________
+2_ :_ in server_bind 
+error: [error 98] address already in use 
+all you have to do is go to the odoo.conf file and change http_port 8069
+to htt_port 8066
+____________________________________________________________________________________________________________________________
+3_ :_ no module named 'pypdf2'
+pip inistall pypdf2
+or 
+pip install -r requirment.te
