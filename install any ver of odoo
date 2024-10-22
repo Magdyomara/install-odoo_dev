@@ -35,7 +35,19 @@ ________________________________________________________________________________
 5-sudo -H pip3 install --upgrade pip
 ______________________________________________________________________________________________________________________________________________________________________________________________
 #Fourthly Install Wkhtmltopd.
-______________________________________________________________________________________________________________________________________________________________________________________________
+__________________________________________________________
+to add new ver or new db
+1- install new odoo
+2-install pip3 install -r requirements.txt
+3-creat db 
+sudo su - postgres
+createuser --createdb --username postgres --no-createrole --no-superuser --pwprompt odoo17_user
+(odoo17_user)db name 
+and add your new pass
+in odoo.conf 
+db name odoo17_user
+db bass add your new pass
+____________________________________________________________________________________________________________________________________
 **** https://wkhtmltopdf.org/downloads.html ******
 Choose that choice
 ( Ubuntu	22.04 (jammy)	amd64)
